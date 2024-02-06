@@ -1,6 +1,9 @@
 import {
+  factorial,
+  findVowel,
   functionForTakeCharacterFromCharIndexToAbove5Index,
   palindrome,
+  primenumber,
   promiseFunctionInvolkedAfter5Seconds,
 } from "./codeString";
 
@@ -20,6 +23,24 @@ export const codes = [
     question:
       "Write a program to check if a string or word or number is palindrome ?",
     codeString: palindrome,
+    language: "javascript",
+  },
+  {
+    question:
+      "Find vowel in given string.",
+    codeString: findVowel,
+    language: "javascript",
+  },
+  {
+    question:
+      "Find factorial number. ",
+    codeString: factorial,
+    language: "javascript",
+  },
+  {
+    question:
+      "Find prime number.",
+    codeString: primenumber,
     language: "javascript",
   },
 ];

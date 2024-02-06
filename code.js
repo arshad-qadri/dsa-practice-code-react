@@ -1,14 +1,14 @@
-// 2. Write a program to check if a string or word or number is palindrome ?
-const isPalindrome = (str) => {
-  str = str.toString();
-  let movedWord = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    const char = str[i];
-    movedWord += char;
+const isPrimeNumber = (number) => {
+  if (number <= 1) {
+    return false;
   }
-  return movedWord == str;
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
-console.log(isPalindrome("madam"));  // true
-console.log(isPalindrome("abc"));  // false
-console.log(isPalindrome(121));  // true
+console.log(isPrimeNumber(99));  // false
+console.log(isPrimeNumber(13));  // true
