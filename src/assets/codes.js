@@ -5,6 +5,7 @@ import {
   palindrome,
   primenumber,
   promiseFunctionInvolkedAfter5Seconds,
+  smallestWord,
 } from "./codeString";
 
 export const codes = [
@@ -41,6 +42,12 @@ export const codes = [
     question:
       "Find prime number.",
     codeString: primenumber,
+    language: "javascript",
+  },
+  {
+    question:
+      "Find smallest word in array.",
+    codeString: smallestWord,
     language: "javascript",
   },
 ];

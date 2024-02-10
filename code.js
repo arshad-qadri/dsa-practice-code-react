@@ -1,14 +1,13 @@
-const isPrimeNumber = (number) => {
-  if (number <= 1) {
-    return false;
-  }
-  for (let i = 2; i < number; i++) {
-    if (number % i === 0) {
-      return false;
+const words = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'mango', 'watermelon'];
+
+const findSmallestWord = (words) => {
+  return words.reduce((accumulator, iterator) => {
+    if (iterator.length < accumulator.length) {
+      return iterator;
+    } else {
+      return accumulator;
     }
-  }
-  return true;
+  });
 };
 
-console.log(isPrimeNumber(99));  // false
-console.log(isPrimeNumber(13));  // true
+console.log(findSmallestWord(words)); // Output: kiwi
