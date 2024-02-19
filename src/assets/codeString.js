@@ -149,8 +149,6 @@ const startDay = startDate.getDay();
 const end_date = endDate.getDate();
 const month = date.getMonth();
 const year = date.getFullYear();
-setMonth(month);
-setYear(year);
 const today = date.getDate();
 let totalDates =
   month === 1 && startDay === 0 ? 28 : end_date + startDay > 35 ? 42 : 35;
