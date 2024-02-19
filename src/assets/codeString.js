@@ -140,3 +140,65 @@ const findSmallestWord = (words) => {
 console.log(findSmallestWord(words));  // Output: kiwi
 
 `
+
+export const  calendarCode = `
+const date = new Date();
+const startDate = new Date(date.getFullYear(), date.getMonth(), 1);
+const endDate = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+const startDay = startDate.getDay();
+const end_date = endDate.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
+setMonth(month);
+setYear(year);
+const today = date.getDate();
+let totalDates =
+  month === 1 && startDay === 0 ? 28 : end_date + startDay > 35 ? 42 : 35;
+let week = 0;
+
+// Approach 1 =>
+let temp = [[]];
+for (let i = 1; i <= totalDates; i++) {
+  if (i >= startDay + 1 && i <= end_date + startDay) {
+    if (today === i - startDay) {
+      temp[week].push({ day: i - startDay, active: true, event: [] });
+    } else {
+      temp[week].push({ day: i - startDay, active: false, event: [] });
+    }
+  } else {
+    temp[week].push({ day: "", active: false, event: [] });
+  }
+  if (
+    temp[week].length === 7 &&
+    temp[week][temp[week].length - 1].day &&
+    temp[week][temp[week].length - 1].day !== end_date
+  ) {
+    week++;
+    temp[week] = [];
+  }
+}
+console.log(temp) // output;
+
+// Approach 2 =>
+let temp2 = [[]];
+let week2 = 0;
+for (let i = 1; i <= startDay; i++) {
+  temp2[week2].push({ day: null, active: false, event: [] });
+}
+for (let i = 1; i <= end_date; i++) {
+  if (temp2[week2].length === 7) {
+    week2++;
+    temp2[week2] = [];
+  }
+  if (i === today) {
+    temp2[week2].push({ day: i, active: true, event: [] });
+  } else {
+    temp2[week2].push({ day: i, active: false, event: [] });
+  }
+}
+while (temp2[week2].length < 7) {
+  temp2[week2].push({ day: null, active: false, event: [] });
+}
+console.log(temp2) // output;
+
+`

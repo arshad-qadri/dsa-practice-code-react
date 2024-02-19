@@ -1,4 +1,5 @@
 import {
+  calendarCode,
   factorial,
   findVowel,
   functionForTakeCharacterFromCharIndexToAbove5Index,
@@ -48,6 +49,12 @@ export const codes = [
     question:
       "Find smallest word in array.",
     codeString: smallestWord,
+    language: "javascript",
+  },
+  {
+    question:
+      "How to make calendar?",
+    codeString: calendarCode,
     language: "javascript",
   },
 ];
