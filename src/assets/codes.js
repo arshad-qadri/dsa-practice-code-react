@@ -5,6 +5,7 @@ import {
   functionForTakeCharacterFromCharIndexToAbove5Index,
   palindrome,
   primenumber,
+  progressBar,
   promiseFunctionInvolkedAfter5Seconds,
   smallestWord,
 } from "./codeString";
@@ -55,6 +56,12 @@ export const codes = [
     question:
       "How to make calendar?",
     codeString: calendarCode,
+    language: "javascript",
+  },
+  {
+    question:
+      "How to make progress bar?",
+    codeString: progressBar,
     language: "javascript",
   },
 ];

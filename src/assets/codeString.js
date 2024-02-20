@@ -17,7 +17,7 @@ promiseFunction()
   
 `;
 
-export const functionForTakeCharacterFromCharIndexToAbove5Index=`
+export const functionForTakeCharacterFromCharIndexToAbove5Index = `
 const alphabates = "abcdefghijklmnopqrstuvwxyz";
 
 const codeWars = (str, num) => {
@@ -36,7 +36,7 @@ const codeWars = (str, num) => {
 
 codeWars("codewar", 5);  // output : "htijbfw"
 
-`
+`;
 
 export const palindrome = `
 const isPalindrome = (str) => {
@@ -53,7 +53,7 @@ console.log(isPalindrome("madam"));  // Output: true
 console.log(isPalindrome("abc"));  // Output: false
 console.log(isPalindrome(121));  // Output: true
 
-`
+`;
 
 export const findVowel = `
 const vowel = (str) => {
@@ -80,7 +80,7 @@ const vowel = (str) => {
 
 console.log(vowel("Hey guy's, How are you today? I hope you are good.")); // Output: 18
 
-`
+`;
 
 export const factorial = `
 // Solution 1
@@ -105,7 +105,7 @@ const factorial = (number) => {
 };
 console.log(factorial(5)); // Output:  120
 
-`
+`;
 
 export const primenumber = `
 const isPrimeNumber = (number) => {
@@ -123,7 +123,7 @@ const isPrimeNumber = (number) => {
 console.log(isPrimeNumber(99));  // false
 console.log(isPrimeNumber(13));  // true
 
-`
+`;
 export const smallestWord = `
 const words = ['apple', 'banana', 'orange', 'grape', 'kiwi', 'mango', 'watermelon'];
 
@@ -139,9 +139,9 @@ const findSmallestWord = (words) => {
 
 console.log(findSmallestWord(words));  // Output: kiwi
 
-`
+`;
 
-export const  calendarCode = `
+export const calendarCode = `
 const date = new Date();
 const startDate = new Date(date.getFullYear(), date.getMonth(), 1);
 const endDate = new Date(date.getFullYear(), date.getMonth() + 1, 0);
@@ -199,4 +199,42 @@ while (temp2[week2].length < 7) {
 }
 console.log(temp2) // output;
 
-`
+`;
+export const progressBar = `
+import React, { useEffect, useRef, useState } from "react";
+
+const ProgressBar = () => {
+  const [progressPercent, setProgressPercent] = useState(0);
+  const intervalID = useRef(null);
+  useEffect(() => {
+    intervalID.current = setInterval(() => {
+      setProgressPercent((prev) => prev + 1);
+    }, 100);
+    return () => {
+      clearInterval(intervalID.current);
+    };
+  }, []);
+  useEffect(() => {
+    if (progressPercent === 100) {
+      clearInterval(intervalID.current);
+    }
+  }, [progressPercent]);
+  return (
+    <div className="w-96  m-auto p-4">
+      <h1 className="text-center mb-3">Progress Bar</h1>
+      <div className="bg-gray-100 rounded-full text-center relative overflow-hidden  w-full h-10">
+        <div className={absolute top-0 left-0 w-full h-full bg-transparent z-20 flex justify-center items-center font-bold {progressPercent<=50 ?"text-black":"text-white"}}>
+          {progressPercent}%
+        </div>
+        <div
+          className="absolute  h-full bg-green-500 left-0 top-0 z-10"
+          style={{ width: {progressPercent}% }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+export default ProgressBar;
+
+`;
