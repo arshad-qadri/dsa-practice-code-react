@@ -8,6 +8,7 @@ import {
   progressBar,
   promiseFunctionInvolkedAfter5Seconds,
   smallestWord,
+  twoDimensionalarraytoSingleWithObject,
 } from "./codeString";
 
 export const codes = [
@@ -62,6 +63,12 @@ export const codes = [
     question:
       "How to make progress bar?",
     codeString: progressBar,
+    language: "javascript",
+  },
+  {
+    question:
+      "Convert 2 diamenasional array in single with object.",
+    codeString: twoDimensionalarraytoSingleWithObject,
     language: "javascript",
   },
 ];

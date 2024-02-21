@@ -238,3 +238,24 @@ const ProgressBar = () => {
 export default ProgressBar;
 
 `;
+
+export const twoDimensionalarraytoSingleWithObject = `
+const array = [
+  ["arshad", "India", 24],
+  ["samuel", "United States", 30],
+  ["maria", "Brazil", 28],
+];
+
+const array2 = array.map(([name, country, age]) => {
+  return { name, country, age };
+});
+console.log(array2);
+
+// Output :
+// [
+//   { name: "arshad", country: "India", age: 24 },
+//   { name: "samuel", country: "United States", age: 30 },
+//   { name: "maria", country: "Brazil", age: 28 },
+// ];
+
+`
